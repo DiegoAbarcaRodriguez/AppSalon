@@ -1,0 +1,22 @@
+{
+    "name": "diego/app-salon-mvc",
+    "autoload": {
+        "psr-4": {
+            "MVC\\":"./",
+            "Controllers\\":"./controllers",
+            "Model\\":"./models",
+            "Classes\\":"./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "DiegoAbarca99",
+            "email": "d.abarcarodriguez@ugto.mx"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.6",
+        "vlucas/phpdotenv": "^5.4"
+    }
+    
+}

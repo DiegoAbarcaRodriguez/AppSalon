@@ -1,0 +1,36 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    min-height: 100%; //Adquiere como minimo el 100% de la ventana visible de la página, pero si hay más contenido este puede expandirse a màs del 100%
+    @include m.tablet {
+        height: 100%; //Se limita a ocupar solo el 100% de la pantalla visible en todos los cosas.
+    }
+    display: flex;
+    flex-direction: column;
+    background-color: v.$negro;
+    color: v.$blanco;
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}

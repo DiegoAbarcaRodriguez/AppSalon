@@ -1,0 +1,31 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.formulario{
+
+    width: 100%;
+
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    label{
+        flex: 0 0 10rem //hace que los labels midan 100px
+    }
+
+    input{
+        flex: 1;
+        border: none;
+        padding: calc(v.$separacion/4);//Calc permite ejecutar operaciones matématicas
+        border-radius: 1rem;
+
+        &:disabled{
+            background-color: lighten($color: v.$negro, $amount: 30%);
+            color:v.$blanco;
+            cursor:not-allowed;
+        }
+    }
+}
+
